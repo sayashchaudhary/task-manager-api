@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="aa2a4985-3795-45a9-9773-28580b9be016" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mongodb.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/db/mongoose.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/db/mongoose.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +48,7 @@
       <updated>1590683705987</updated>
       <workItem from="1590683710087" duration="5931000" />
       <workItem from="1590840454799" duration="3212000" />
-      <workItem from="1590858160094" duration="1237000" />
+      <workItem from="1590858160094" duration="2096000" />
     </task>
     <servers />
   </component>
