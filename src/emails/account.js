@@ -1,39 +1,27 @@
 const sgMail = require('@sendgrid/mail')
 const res = require("express");
 
-const sendgridAPIKey = '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';
-sgMail.setApiKey(sendgridAPIKey);
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
-const msg = {
-    to: 'learnmorewithsaysh@gmail.com',
-    form: 'sayashchaudhary@gmail.com',
-    name: 'sayash',
-    subject: 'this is my first creation',
-    text: 'I hope this is actually gets to you'
+const sendWelcomeEmail = (email, name) => {
+    sgMail.send({
+        to: email,
+        from: 'sayashchaudhary@gmail.com',
+        subject: 'Welcome to the app',
+        text: `Welcome to the app, ${name}. Let me know how to get along the app.`
+    })
 }
 
+const cancellationEmail = (email, name) => {
+    sgMail.send({
+        to: email,
+        from: 'sayashchaudhary@gmail.com',
+        subject: 'It feels sad you are leaving the app',
+        text: `${name}, its feels sad you are the leaving the app`
+    })
+}
 
-    // sgMail.send(msg);
-
-
-    sgMail
-        .send(msg)
-        .then(() => {}, error => {
-            console.error(error);
-
-            if (error.response) {
-                console.error(error.response.body)
-            }
-        });
-
-    // (async () => {
-    //     try {
-    //         await sgMail.send(msg);
-    //     } catch (error) {
-    //         console.error(error);
-    //
-    //         if (error.response) {
-    //             console.error(error.response.body)
-    //         }
-    //     }
-    // })
+module.exports = {
+    sendWelcomeEmail,
+    cancellationEmail
+}

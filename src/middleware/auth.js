@@ -9,7 +9,7 @@ const auth = async (req, res, next) => {
             res.status(401).send('Invalid Token')
         }
 
-        const tokenDecode = jwt.decode(token, "taskmanagaerapi");
+        const tokenDecode = jwt.decode(token, process.env.JWT_SECRET);
         const user = await User.findOne({ _id: tokenDecode._id, 'tokens.token': token });
 
         if (!user) {
